@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "E01"
+		},
+		{
+			"path": "E02"
 		}
 	],
 	"settings": {}
