@@ -1,0 +1,9 @@
+.bg {
+    background: url('../assets/img/farm.jpg') no-repeat;
+    background-size: cover;
+}
+.masthead-avatar {
+    border-radius: 50%;
+    box-shadow: 1px 1px 40px 5px #000;
+    border: 8px solid #fff;
+}

@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "E02"
+		},
+		{
+			"path": "E03"
+		},
+		{
+			"path": "Project"
 		}
 	],
 	"settings": {}
