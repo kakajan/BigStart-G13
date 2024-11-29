@@ -41,7 +41,7 @@
                             href="/contact">Contact</a></li>
                 </ul>
             </div>
-            <nav style="position:absolute;bottom:-30px;left:0;right:0; padding:5px 15px;background:#fff;border-radius:25px; z-index:0"
+            <nav style="position:absolute;bottom:-30px;left:0;right:0; padding:5px 15px;background:#fff;border-radius:25px;"
             aria-label="breadcrumb">
             <ol class="breadcrumb" style="margin-bottom: 0!important">
                 @section('breadCrumb')
@@ -53,7 +53,7 @@
 
     </nav>
 
-    <div style="position: relative; top:25px; z-index:-1">
+    <div style="position: relative; top:25px; z-index:1">
         @yield('mainContent')
     </div>
 
