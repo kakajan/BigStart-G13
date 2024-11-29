@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/','pages.welcome', ['title' => 'Golden <i>Farm</i>']);
+Route::view('/','pages.welcome', ['title' => 'Golden Farm']);
 Route::view('/about','pages.about', ['title' => 'Golden Farm']);
 Route::view('/products','pages.products', ['title' => 'Golden Farm']);
 Route::view('/contact','pages.contact', ['title' => 'Golden Farm']);
