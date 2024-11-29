@@ -53,7 +53,7 @@
 
     </nav>
 
-    <div style="position: relative; top:25px; z-index:1">
+    <div style="position: relative; top:25px;">
         @yield('mainContent')
     </div>
 
