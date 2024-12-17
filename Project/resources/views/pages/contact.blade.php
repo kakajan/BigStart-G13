@@ -27,15 +27,15 @@
                         @csrf
                         <!-- Name input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="name" name="full_name" type="text" placeholder="Enter your name..."
-                                data-sb-validations="required" />
+                            <input class="form-control" id="name" name="full_name" type="text"
+                                placeholder="Enter your name..." data-sb-validations="required" />
                             <label for="name">Full name</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
+                            <input class="form-control" id="email" name="email" type="email"
+                                placeholder="name@example.com" data-sb-validations="required,email" />
                             <label for="email">Email address</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
                             </div>
@@ -43,8 +43,8 @@
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890"
-                                data-sb-validations="required" />
+                            <input class="form-control" id="phone" name="phone" type="tel"
+                                placeholder="(123) 456-7890" data-sb-validations="required" />
                             <label for="phone">Phone number</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
                                 required.</div>
@@ -82,7 +82,52 @@
                     </form>
                 </div>
                 <div class="col-lg-8 col-xl-7">
-                    {{ $messages }}
+                    @foreach ($messages as $message)
+                        <div class="card p-3 mt-2">
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div class="user d-flex flex-row align-items-center">
+
+                                    <img src="/assets/img/user-avatar-male-5.png" width="30"
+                                        class="user-img rounded-circle mr-2">
+                                    <span><small class="font-weight-bold text-primary">{{ $message->fullName }}</small> <small
+                                            class="font-weight-bold">{{ $message->message }}</small></span>
+
+                                </div>
+
+
+                                <small>{{ $message->created_at }}</small>
+
+                            </div>
+
+
+                            <div class="action d-flex justify-content-between mt-2 align-items-center">
+
+                                <div class="reply px-4">
+                                    <small>Remove</small>
+                                    <span class="dots"></span>
+                                    <small>Reply</small>
+                                    <span class="dots"></span>
+                                    <small>Translate</small>
+
+                                </div>
+
+                                <div class="icons align-items-center">
+
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-check-circle-o check-icon"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                    @endforeach
+
+
                 </div>
             </div>
         </div>
