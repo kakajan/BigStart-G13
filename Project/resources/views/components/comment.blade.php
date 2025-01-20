@@ -6,9 +6,8 @@
             <div class="user d-flex flex-row align-items-center">
 
                 <img src="/assets/img/avatar.jpg" width="30" class="user-img rounded-circle mr-2">
-                <span style="margin-left: 8px"><small
-                        class="font-weight-bold text-primary">{{ $payam->fullName }}</small> <small
-                        class="font-weight-bold">{{ $payam->message }}</small></span>
+                <span style="margin-left: 8px"><small class="font-weight-bold text-primary">{{ $payam->fullName }}</small>
+                    <small class="font-weight-bold">{{ $payam->message }}</small></span>
 
             </div>
 
@@ -21,11 +20,16 @@
         <div class="action d-flex justify-content-between mt-2 align-items-center">
 
             <div class="reply px-4">
-                <small>Remove</small>
+                <small>
+                    <form action="/contact/{{ $payam->id }}" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="Remove">
+                    </form>
+                </small>
                 <span class="dots"></span>
-                <small>Reply</small>
-                <span class="dots"></span>
-                <small>Edit</small>
+                <small><a href="/contact/edit/{{ $payam->id }}">
+                        Edit</a></small>
             </div>
 
             <div class="icons align-items-center">
