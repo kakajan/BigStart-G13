@@ -87,7 +87,7 @@
                             <button class="btn btn-primary btn-xl" type="submit">Send</button>
                         </form>
                         @else
-                           <form action="/contact/update/{{ $selectedMessage->id }}" method="post" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                           <form action="/contact/{{ $selectedMessage->id }}" method="post" id="contactForm" data-sb-form-api-token="API_TOKEN">
                             @csrf
                             @method('put')
                             <!-- Name input-->

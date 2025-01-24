@@ -28,7 +28,7 @@
                     </form>
                 </small>
                 <span class="dots"></span>
-                <small><a href="/contact/edit/{{ $payam->id }}">
+                <small><a href="/contact/{{ $payam->id }}/edit">
                         Edit</a></small>
             </div>
 
