@@ -13,5 +13,7 @@
 			"path": "Project"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"i18n-ally.localesPaths": []
+	}
 }
