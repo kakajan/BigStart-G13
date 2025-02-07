@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('profiles', function (Blueprint $table) {
-            $table->boolean('banned')->default(false)->after('active');
+            $table->string('avatar')->after('last_name')->nullable();
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('profiles', function (Blueprint $table) {
-            $table->dropColumn('banned');
+            $table->dropColumn('avatar');
         });
     }
 };
